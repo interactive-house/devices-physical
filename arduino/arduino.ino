@@ -8,7 +8,7 @@ bool isDoorOpen = false;
 bool isWindowOpen = false;
 bool isLightOn = false;
 int buttonRightPin = 4; // Define the button in D4
-int buttonRightValue;
+int buttonRightValue; // right buttons value
 char incomingString;
 
 int soilValue = 0;
@@ -68,7 +68,7 @@ void loop()
 
 void checkGasValue(){
     int val = analogRead (MQ2); // Read the voltage value of A0 port and assign it to val
-    Serial.println (val); // Serial port sends val value
+    //Serial.println (val); // Serial port sends val value
     if (val> 450){ // turn on the fan
       digitalWrite (7, HIGH);
       analogWrite(6,150);
