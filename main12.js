@@ -1,4 +1,4 @@
-const { SerialPort, ReadlineParser, SerialPortStream } = require("serialport");
+const { SerialPort, ReadlineParser } = require("serialport");
 // const readline = require("readline");
 var prompt = require("prompt-sync")();
 
@@ -22,8 +22,8 @@ console.log("input d for door,\n",
 			"l for lights,\n",
 			"s for soild humidity info,\n",
 			"q for quit")
-while (true) {
 
+while (true) {
   var n = prompt("Input ");
   console.log(n)
   port.write(n)
@@ -32,25 +32,3 @@ while (true) {
   }
 }
 
-/*
-console.log("input d for door,\n",
-			"w for window,\n",
-			"l for lights,\n",
-			"s for soild humidity info,\n",
-			"q for quit")
-
-
-do{
-	var n = prompt("Input here please: ");
-	//console.log(typeof n);
-	if (n=="q"){
-		break;
-	}
-	 writeHouse(n)
-	
-}while (true)
-
-async function  writeHouse(n){
-	port.write(n);
-}
-*/
